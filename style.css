@@ -1,0 +1,181 @@
+body {
+  background-color: #ff6b8133;
+  overflow: hidden;
+}
+#loader {
+  position: absolute;
+  content: '';
+  left: 50%;
+  top: 35%;
+  transform: translate(-100%, -240%);
+  font-size: 90px;
+}
+
+#loader heart {
+  
+  animation: heart 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  top: 50%;
+  content: '';
+  left: 50%;
+  position: absolute;
+}
+
+#loader .heartL {
+  animation: heartL 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  width: 1em;
+  height: 1em;
+  border: 1px solid crimson;
+  background-color: crimson;
+  content: '';
+  position: absolute;
+  display: block;
+  transform: translate(-29px, -28px);
+  border-radius: 100%;
+}
+
+#loader .heartR {
+  animation: heartR 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  width: 1em;
+  height: 1em;
+  border: 1px solid crimson;
+  background-color: crimson;
+  content: '';
+  position: absolute;
+  display: block;
+  transform: translate(29px, -28px);
+  border-radius: 100%;
+}
+
+#loader .square {
+  animation: square 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  width: 1em;
+  height: 1em;
+  border: 1px solid crimson;
+  background-color: crimson;
+  transform: scale(1) rotate(-45deg);
+  position: relative;
+  display: block;
+  content: '';
+}
+
+#loader shadow {
+  animation: shadow 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  top: 150px;
+  left: 50%;
+  content: '';
+  position: relative;
+  display: block;
+  bottom: -.7em;
+  width: 1em;
+  height: .25em;
+  border-radius: 50%;
+  background-color: #999898;
+  border: 1px solid #999898;
+}
+
+@keyframes square {
+  50% {
+    border-radius: 100%;
+    transform: scale(0.5) rotate(-45deg);
+  }
+  100% {
+    transform: scale(1) rotate(-45deg);
+  }
+}
+@keyframes heart {
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+@keyframes heartL {
+  60% {
+    transform: scale(0.4);
+  }
+}
+@keyframes heartR {
+  40% {
+    transform: scale(0.4);
+  }
+}
+@keyframes shadow {
+  50% {
+    transform: scale(0.5);
+    border-color: #e4e4e4;
+  }
+}
+
+@import url(//fonts.googleapis.com/css?family=Vibur);
+.logo {
+  text-align: center;
+  width: 500px;
+  height: 250px;
+  margin: auto;
+  position: absolute;
+  top: 290px;
+  left: -150px;
+  right: 0;
+  bottom: 0;
+  user-select: none;
+}
+
+.logo b{
+  font: 200 12vh "Vibur";
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em crimson, 0 0 0.5em crimson, 0 0 0.1em crimson, 0 10px 3px crimson;
+}
+.logo b span{
+  animation: blink linear infinite 2s;
+}
+.logo b span:nth-of-type(2){
+  animation: blink linear infinite 3s;
+}
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79%{
+     color: crimson;
+  }
+  80% {
+    
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: crimson;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: crimson;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+.boton {
+  padding: 15px 30px;
+  background-color: #ff7f7f; /* Color de fondo */
+  border: 2px solid #ff4f4f; /* Borde rojo más oscuro */
+  border-radius: 8px; /* Bordes redondeados */
+  color: white; /* Color de texto */
+  font-size: 18px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: all 0.3s ease-in-out; /* Transición suave para efectos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}

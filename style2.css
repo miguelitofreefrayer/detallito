@@ -1,0 +1,29 @@
+body {
+    box-sizing: border-box;
+}
+.heart {
+    position: fixed;
+    top: -1vh;
+    transform: translateY(0);
+    animation: fall 3s linear forwards;
+}
+@keyframes fall {
+    to {
+        transform: translateY(105vh);
+    }
+}
+
+.boton {
+    padding: 15px 30px;
+    background-color: #000000; /* Color de fondo */
+    border: 2px solid #ffffff; /* Borde rojo más oscuro */
+    border-radius: 8px; /* Bordes redondeados */
+    color: white; /* Color de texto */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: all 0.3s ease-in-out; /* Transición suave para efectos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  }
+  
